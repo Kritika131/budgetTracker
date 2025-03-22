@@ -4,7 +4,7 @@ import { getDashboardData } from "@/actions/dashboard";
 import { getCurrentBudget } from "@/actions/budget";
 import { AccountCard } from "./_components/account-card";
 import { CreateAccountDrawer } from "@/components/create-account-drawer";
-import { BudgetProgress } from "./_components/budget-progress";
+import { BudgetProgress } from "./_components/budget_progress";
 import { Card, CardContent } from "@/components/ui/card";
 import { Plus } from "lucide-react";
 import { DashboardOverview } from "./_components/transaction-overview";
@@ -19,7 +19,7 @@ export default async function DashboardPage() {
 
   // Get budget for default account
   let budgetData = null;
-  
+
   if (defaultAccount) {
     budgetData = await getCurrentBudget(defaultAccount.id);
   }
